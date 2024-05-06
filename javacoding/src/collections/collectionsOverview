@@ -1,0 +1,63 @@
+Collections overview
+
+difference between collection framework and collection interface
+collection framework has collection interface
+
+collection interface ---> (List, Set, Queue)(children interface of collection interface),
+                          Map(separte from above child interface)
+         usage                   implementation  TC for add or rem ele           TC for ele check
+      storing continous data        List            0(n) (all ele willbe moved)     0(n)
+      storing unique values         Set             0(1)                            0(1)
+      storing unique, sorted ele    TreeSet         log n
+      to set priority of ele        Queue
+      for storing in key, value     Map
+
+QUEUE
+
+Linkedlist present in list and queue interface, bcoz LinkedList is class implemented by its interface
+
+Methods of Queue
+The Queue interface includes all the methods of the Collection interface.
+It is because Collection is the super interface of Queue.
+
+Some of the commonly used methods of the Queue interface are:
+
+add() - Inserts the specified element into the queue.
+        If the task is successful, add() returns true, if not it throws an exception.
+offer() - Inserts the specified element into the queue. If the task is successful, offer()
+            returns true, if not it returns false.
+
+element() - Returns the head of the queue. Throws an exception if the queue is empty.
+peek() - Returns the head of the queue. Returns null if the queue is empty.
+remove() - Returns and removes the head of the queue. Throws an exception if the queue is empty.
+poll() - Returns and removes the head of the queue. Returns null if the queue is empty.
+
+PRIORITY QUEUE
+
+it is similar to queue but we want to give priority to some elements basesd on some
+constraints(like small ele, large, custom)
+
+doubt : implementation of comparator in queue decalration
+
+DEQUE
+similar to queue we can add or remove ele from front and back at the same time
+we can peek()( means we can get top ele) from both sides
+
+application - sliding window technique implemented in both sides
+
+
+SET
+duplicate ele are not allowed in set, doesnt have any order
+     LinkedHashSet
+        similar to set(no duplicates) but ele are stored in the order of initalisation
+     TreeSet
+        similar to set(no duplicates) , ele are sorted like binary search tree
+
+
+MAP
+   stores ele in key value pair, keys are unique, values can be duplicate
+TREEMAP
+    similar to MAP but sorted based on keys
+
+
+COMPARATOR
